@@ -1,0 +1,20 @@
+project:
+  slug: example-documentary-project
+  title: Untitled Documentary Timeline
+  thesis: Replace this with the central historical argument.
+  target_runtime_minutes: [12, 20]
+  status: initialization
+
+editorial:
+  prefer_first_person: true
+  require_complete_thoughts: true
+  require_boundary_verification: true
+  distinguish_influence_from_similarity: true
+  maximum_candidates_per_beat: 5
+
+paths:
+  source_manifest: sources.yaml
+  narrative_beats: narrative/narrative-beats.yaml
+  candidates: candidates/candidates.yaml
+  radio_edit: timeline/radio-edit.yaml
+  delivery_directory: renders/deliverables

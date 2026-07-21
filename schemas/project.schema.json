@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/documentary-timeline/project.schema.json",
+  "title": "Documentary timeline project configuration",
+  "type": "object",
+  "required": ["project", "editorial", "paths"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["slug", "title", "thesis", "target_runtime_minutes", "status"],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "thesis": { "type": "string", "minLength": 1 },
+        "target_runtime_minutes": {
+          "type": "array",
+          "prefixItems": [
+            { "type": "number", "minimum": 1 },
+            { "type": "number", "minimum": 1 }
+          ],
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "status": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "editorial": { "type": "object" },
+    "paths": { "type": "object" }
+  },
+  "additionalProperties": true
+}

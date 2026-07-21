@@ -1,0 +1,23 @@
+project: example-documentary-project
+version: 1
+status: draft
+entries: []
+
+# Example entry:
+# - order: 10
+#   type: Host
+#   speaker: Host
+#   source_id: null
+#   candidate_id: null
+#   start: null
+#   end: null
+#   duration: 12.0
+#   asset: renders/selected-takes/010-opening-take-2.wav
+#   transition_out_seconds: 0.18
+#   purpose: Establish the opening question.
+#   incoming_context: Cold open.
+#   outgoing_context: Set up the first archival clip.
+#   host_text: Narration goes here.
+#   transition_notes: Preserve a short beat before the clip.
+#   visual_notes: Primary document or archival image.
+#   status: draft

@@ -1,0 +1,26 @@
+video:
+  width: 1920
+  height: 1080
+  frame_rate: 30
+  pixel_format: yuv420p
+  review_codec: libx264
+  review_crf: 19
+  review_preset: veryfast
+
+audio:
+  sample_rate: 48000
+  channels: 2
+  review_codec: aac
+  review_bitrate: 192k
+
+editing:
+  review_handle_before_seconds: 5.0
+  review_handle_after_seconds: 5.0
+  host_clip_transition_beat_seconds: 0.18
+  preserve_natural_tail: true
+
+delivery:
+  preserve_video_stream_when_possible: true
+  faststart: true
+  require_full_decode_check: true
+  checksum: sha256

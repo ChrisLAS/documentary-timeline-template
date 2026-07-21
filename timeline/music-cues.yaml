@@ -1,0 +1,20 @@
+project: example-documentary-project
+version: 1
+status: not-started
+program: renders/assemblies/radio-edit.wav
+output: renders/assemblies/radio-edit-music-pass.wav
+mix_policy:
+  principle: Music is transitional punctuation unless the project explicitly requires a continuous bed.
+  standard_gain_db: -18.0
+cues: []
+
+# Example cue:
+# - id: chapter-transition
+#   track: music/background.wav
+#   track_in: 0.0
+#   program_in: 120.0
+#   duration: 18.0
+#   gain_db: -18.0
+#   fade_in: 3.0
+#   fade_out: 3.0
+#   purpose: Carry the chapter transition and leave before dense explanation.

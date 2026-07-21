@@ -1,0 +1,31 @@
+# Local environments and caches
+.direnv/
+.env
+.venv/
+__pycache__/
+*.py[cod]
+result
+result-*
+
+# Downloaded models and large generated media
+models/
+sources/*/media/
+sources/*/frames/
+sources/*/analysis/
+renders/*
+!renders/README.md
+!renders/.gitkeep
+
+# Runtime logs and temporary files
+logs/*
+!logs/README.md
+!logs/.gitkeep
+*.tmp
+*.part
+*.ytdl
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

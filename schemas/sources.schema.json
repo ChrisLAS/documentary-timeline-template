@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/documentary-timeline/sources.schema.json",
+  "title": "Source manifest",
+  "type": "object",
+  "required": ["project", "manifest_version", "rights_note", "sources"],
+  "properties": {
+    "project": { "type": "string", "minLength": 1 },
+    "manifest_version": { "type": "integer", "minimum": 1 },
+    "rights_note": { "type": "string", "minLength": 1 },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": [
+        "id", "title", "url", "publisher", "speaker_names", "source_type",
+        "historical_topics", "first_person", "provenance_quality",
+        "editorial_value", "known_weaknesses", "status"
+      ],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "pattern": "^https?://" },
+        "publisher": { "type": "string", "minLength": 1 },
+        "speaker_names": { "type": "array", "items": { "type": "string" } },
+        "publication_date": { "type": ["string", "null"] },
+        "upload_date": { "type": ["string", "null"] },
+        "runtime": { "type": ["string", "null"] },
+        "source_type": { "type": "string", "minLength": 1 },
+        "historical_topics": { "type": "array", "items": { "type": "string" } },
+        "first_person": { "type": "boolean" },
+        "provenance_quality": { "type": "string", "minLength": 1 },
+        "editorial_value": { "type": "string", "minLength": 1 },
+        "known_weaknesses": { "type": "array", "items": { "type": "string" } },
+        "status": { "enum": ["lead", "shortlist", "alternate", "research-only", "reject", "unavailable"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

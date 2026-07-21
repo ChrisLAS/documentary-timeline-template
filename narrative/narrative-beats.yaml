@@ -1,0 +1,21 @@
+project: example-documentary-project
+version: 1
+beats: []
+
+# Example beat:
+# - id: concise-beat-id
+#   order: 10
+#   chapter: Chapter title
+#   audience_question: What does the audience need answered here?
+#   claim_to_establish: The precise historical claim.
+#   historical_period: YYYY-YYYY
+#   preferred_speaker: Historical participant or narrator
+#   preferred_source_type: first-person interview
+#   required_context: Context needed for a standalone clip.
+#   ideal_clip_duration_seconds: 30
+#   maximum_clip_duration_seconds: 75
+#   host_bridge_before: Concise setup.
+#   host_bridge_after: Concise transition.
+#   visual_opportunities: [primary document, archival footage]
+#   historical_caveats: Avoid overstating causation or influence.
+#   status: open

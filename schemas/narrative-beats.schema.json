@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/documentary-timeline/narrative-beats.schema.json",
+  "title": "Narrative beat map",
+  "type": "object",
+  "required": ["project", "version", "beats"],
+  "properties": {
+    "project": { "type": "string", "minLength": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "beats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id", "order", "chapter", "audience_question", "claim_to_establish",
+          "historical_period", "preferred_speaker", "preferred_source_type",
+          "required_context", "ideal_clip_duration_seconds",
+          "maximum_clip_duration_seconds", "host_bridge_before",
+          "host_bridge_after", "visual_opportunities", "historical_caveats", "status"
+        ],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "order": { "type": "integer", "minimum": 0 },
+          "ideal_clip_duration_seconds": { "type": "number", "minimum": 0 },
+          "maximum_clip_duration_seconds": { "type": "number", "minimum": 0 },
+          "visual_opportunities": { "type": "array" },
+          "status": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

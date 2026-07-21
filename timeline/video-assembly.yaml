@@ -1,0 +1,12 @@
+project: example-documentary-project
+version: 1
+status: not-started
+audio_program: renders/assemblies/radio-edit.wav
+output: renders/assemblies/rough-cut.mp4
+entries: []
+
+# Example entry:
+# - order: 10
+#   picture_asset: renders/selected-clips/010-opening.mp4
+#   duration: 24.500
+#   picture_status: archival-clip

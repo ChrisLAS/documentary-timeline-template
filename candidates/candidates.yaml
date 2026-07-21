@@ -1,0 +1,44 @@
+project: example-documentary-project
+version: 1
+candidates: []
+
+# Example candidate:
+# - candidate_id: 010-beat-speaker-a
+#   narrative_beat: concise-beat-id
+#   source_id: source-id
+#   speaker: Speaker Name
+#   rough_start: "00:00:00.000"
+#   rough_end: "00:00:30.000"
+#   surrounding_context_start: "00:00:00.000"
+#   surrounding_context_end: "00:02:00.000"
+#   transcript: Complete candidate transcript.
+#   historical_claim: Precise claim made by the passage.
+#   why_it_matters: Narrative job.
+#   setup_required: Host or interviewer setup.
+#   payoff: Strong landing.
+#   strongest_sentence: Most valuable sentence.
+#   first_person_value: high
+#   visual_value: 7
+#   audio_value: 8
+#   historical_confidence: high
+#   editorial_confidence: medium
+#   duplication_risk: low
+#   weaknesses: []
+#   recommended_action: Hold
+#   scores:
+#     historical_authority: 8
+#     explanatory_clarity: 8
+#     completeness_of_thought: 8
+#     natural_opening: 7
+#     strength_of_ending: 8
+#     rhetorical_impact: 7
+#     audio_quality: 8
+#     visual_quality: 7
+#     uniqueness: 8
+#     narrative_usefulness: 9
+#     accuracy: 9
+#     brevity_relative_to_value: 8
+#   total_score: 95
+#   must_use: false
+#   replaceable: true
+#   fatal_flaw: null

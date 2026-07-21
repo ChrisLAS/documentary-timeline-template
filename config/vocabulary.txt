@@ -1,0 +1,8 @@
+# Add names and technical terms that transcription engines commonly miss.
+# One preferred spelling per line.
+
+Example Person
+Example Project
+proof of work
+double spending
+timestamping

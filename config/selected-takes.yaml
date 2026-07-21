@@ -1,0 +1,13 @@
+project: example-documentary-project
+master: sources/host-narration/media/master.mp4
+output_directory: renders/selected-takes
+entries: []
+
+# Example entry:
+# - id: 010-opening-take-2
+#   timeline_order: 10
+#   segments:
+#     - [42.150, 58.720]
+#   transcript_job: Opening setup
+#   verdict: KEEP
+#   notes: Preserve the complete thought and its natural room-tone tail.

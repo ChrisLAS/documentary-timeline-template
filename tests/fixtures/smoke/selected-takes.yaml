@@ -1,0 +1,11 @@
+project: smoke-project
+master: sources/host-narration/media/master.mp4
+output_directory: renders/selected-takes
+entries:
+  - id: 010-smoke-take
+    timeline_order: 10
+    segments:
+      - [0.200, 1.700]
+    transcript_job: Synthetic smoke test
+    verdict: KEEP
+    notes: Test fixture only.

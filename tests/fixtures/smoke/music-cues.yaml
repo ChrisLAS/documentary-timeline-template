@@ -1,0 +1,18 @@
+project: smoke-project
+version: 1
+status: test
+program: renders/assemblies/radio-edit.wav
+output: renders/assemblies/radio-edit-music.wav
+mix_policy:
+  principle: Synthetic smoke test.
+  standard_gain_db: -24.0
+cues:
+  - id: test-cue
+    track: music/test.wav
+    track_in: 0.0
+    program_in: 0.5
+    duration: 1.0
+    gain_db: -24.0
+    fade_in: 0.2
+    fade_out: 0.2
+    purpose: Exercise music cue rendering.

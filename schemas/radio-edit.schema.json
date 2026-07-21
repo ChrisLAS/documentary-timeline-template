@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/documentary-timeline/radio-edit.schema.json",
+  "title": "Radio edit",
+  "type": "object",
+  "required": ["project", "version", "status", "entries"],
+  "properties": {
+    "project": { "type": "string", "minLength": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "type": "string", "minLength": 1 },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "order", "type", "speaker", "source_id", "candidate_id", "start",
+          "end", "duration", "purpose", "incoming_context", "outgoing_context",
+          "host_text", "transition_notes", "visual_notes", "status"
+        ],
+        "properties": {
+          "order": { "type": "integer", "minimum": 0 },
+          "type": {
+            "enum": ["Host", "Clip", "Archival clip", "Document reading", "Quotation card", "Silence", "Transition", "B-roll bridge"]
+          },
+          "duration": { "type": "number", "minimum": 0 }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

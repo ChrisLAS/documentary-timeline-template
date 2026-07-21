@@ -1,0 +1,14 @@
+project: smoke-project
+version: 1
+status: test
+audio_program: renders/assemblies/radio-edit-music.wav
+output: renders/assemblies/rough-cut.mp4
+entries:
+  - order: 10
+    picture_asset: sources/host-narration/media/master.mp4
+    duration: 1.6
+    picture_status: synthetic-video
+  - order: 20
+    picture_asset: null
+    duration: 0.4
+    picture_status: intentional-black

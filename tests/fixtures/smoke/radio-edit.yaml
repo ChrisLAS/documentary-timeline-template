@@ -1,0 +1,36 @@
+project: smoke-project
+version: 1
+status: test
+entries:
+  - order: 10
+    type: Host
+    speaker: Test Tone
+    source_id: null
+    candidate_id: null
+    start: null
+    end: null
+    duration: 1.5
+    asset: renders/selected-takes/010-smoke-take.wav
+    transition_out_seconds: 0.1
+    purpose: Exercise the audio conform.
+    incoming_context: Start.
+    outgoing_context: Silence.
+    host_text: Synthetic test tone.
+    transition_notes: Short pad.
+    visual_notes: Synthetic color.
+    status: test
+  - order: 20
+    type: Silence
+    speaker: null
+    source_id: null
+    candidate_id: null
+    start: null
+    end: null
+    duration: 0.4
+    purpose: Exercise generated silence.
+    incoming_context: Test tone.
+    outgoing_context: End.
+    host_text: null
+    transition_notes: None.
+    visual_notes: Black.
+    status: test
