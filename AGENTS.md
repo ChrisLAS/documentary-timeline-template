@@ -30,6 +30,19 @@ projects. Preserve editorial reasoning and original media at every step.
 - Render focused review excerpts before replacing a full assembly.
 - Decode-check final deliverables with FFmpeg.
 
+## Optional visual integrations
+
+- Use the bundled `documentary-visual-development` skill for B-roll, document
+  animation, diagrams, motion overlays, and visual-pass promotion.
+- Keep Video Shotcraft and OpenMontage checkouts under ignored `.integrations/`
+  at the commits in `integrations/integrations.lock.json`.
+- Treat Shotcraft as a motion reference and OpenMontage as an isolated retrieval
+  or QC sidecar. Neither may silently replace the project's research, timeline,
+  narration, source boundaries, or audio conform.
+- Do not copy upstream code or assets without recording exact provenance,
+  licenses, notices, and any separate asset terms.
+- Render focused visual previews before promoting a versioned full assembly.
+
 ## Validation
 
 Run the narrowest relevant checks, then the project validator:

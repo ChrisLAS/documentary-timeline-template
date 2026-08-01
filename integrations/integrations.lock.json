@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "integrations": [
+    {
+      "id": "video-shotcraft",
+      "repository": "https://github.com/Vincentwei1021/video-shotcraft.git",
+      "commit": "d4915443232e89527fdc9d7e79f132ba411fc440",
+      "license": "Apache-2.0",
+      "checkout": ".integrations/video-shotcraft",
+      "mode": "motion-reference",
+      "direct_code_adaptation_default": false,
+      "notes": "Use shot recipes and motion principles selectively. Do not copy bundled audio or product-promo defaults into documentary work."
+    },
+    {
+      "id": "openmontage",
+      "repository": "https://github.com/calesthio/OpenMontage.git",
+      "commit": "c36e41223e819441748817105635ac4036d41b10",
+      "license": "AGPL-3.0-only",
+      "checkout": ".integrations/OpenMontage",
+      "mode": "isolated-sidecar",
+      "direct_code_adaptation_default": false,
+      "notes": "Evaluate corpus retrieval, contact sheets, checkpoints, and QC in isolation. Do not make its beta documentary-montage pipeline authoritative for narrated historical work."
+    }
+  ]
+}

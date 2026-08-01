@@ -1,0 +1,15 @@
+base_assembly: renders/assemblies/rough-cut.mp4
+output: renders/assemblies/rough-cut-visual-v2.mp4
+crf: 18
+preset: slow
+
+# Each insert must be a complete, approved full-frame visual render. The
+# renderer re-encodes picture for frame-accurate placement and stream-copies the
+# base assembly's audio, then verifies the audio packet hash.
+overlays:
+  - id: primary-document-sequence
+    path: renders/visual-inserts/primary-document-sequence.mp4
+    start: 120.500
+    duration: 18.000
+    fade_in: 0.250
+    fade_out: 0.250

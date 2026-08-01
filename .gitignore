@@ -2,6 +2,7 @@
 .direnv/
 .env
 .venv/
+.integrations/
 __pycache__/
 *.py[cod]
 result
