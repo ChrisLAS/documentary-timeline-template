@@ -1,0 +1,4 @@
+interface:
+  display_name: "Documentary Visual Development"
+  short_description: "Build restrained, source-faithful documentary visuals"
+  default_prompt: "Use $documentary-visual-development to plan and validate source-faithful B-roll, document animations, and technical overlays for this documentary."

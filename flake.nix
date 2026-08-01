@@ -17,19 +17,31 @@
             ps.pyyaml
             ps.scenedetect
           ]);
+          corePackages = with pkgs; [
+            actionlint
+            ffmpeg
+            git
+            gnumake
+            jq
+            python
+            shellcheck
+            whisper-cpp
+            yt-dlp
+          ];
         in
         {
           default = pkgs.mkShell {
-            packages = with pkgs; [
-              actionlint
-              ffmpeg
-              git
-              jq
-              python
-              shellcheck
-              whisper-cpp
-              yt-dlp
-            ];
+            packages = corePackages;
+          };
+
+          visual = pkgs.mkShell {
+            packages = corePackages ++ (with pkgs; [
+              chromium
+              imagemagick
+              nodejs_22
+              uv
+            ]);
+            DOCUMENTARY_CHROMIUM = "${pkgs.chromium}/bin/chromium";
           };
         });
     };

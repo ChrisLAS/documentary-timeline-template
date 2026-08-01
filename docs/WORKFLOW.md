@@ -127,6 +127,19 @@ under dense explanation unless the project calls for it.
 Report runtime, timeline, missing narration, repetition, weak transitions, and
 remaining judgment calls.
 
+## Phase 10.5: Visual development
+
+After the audio conform and archival boundaries are stable, audit the timeline
+for primary-document sequences, explanatory diagrams, restrained motion, and
+B-roll. Render focused previews with surrounding context before replacing any
+part of the full assembly.
+
+Use `skills/documentary-visual-development/SKILL.md` and
+`docs/VISUAL_INTEGRATIONS.md`. Keep optional Shotcraft and OpenMontage work
+isolated from the authoritative timeline. Promote only approved full-frame
+inserts with `scripts/apply_visual_overlays.py`, then full-decode the assembly
+and verify that its audio packet hash matches the approved base.
+
 ## Phase 11: Delivery
 
 - Freeze editorial timing before finishing.

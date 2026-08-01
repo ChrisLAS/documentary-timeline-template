@@ -18,11 +18,15 @@ review, historical fact-checking, and export-level quality control.
 - Human-reviewed start and end decisions with focused review renders.
 - Narration take selection, radio edits, transition spacing, and sparse music cues.
 - Evidence-led B-roll guidance and a configurable 1080p rough-cut assembler.
+- A reusable Codex skill for source-faithful visual development and motion QC.
+- Optional pinned Shotcraft motion references and OpenMontage retrieval/QC experiments.
 - Full decode checks, delivery specifications, and SHA-256 output records.
 - Schemas, cross-reference validation, unit tests, media smoke tests, and CI.
 
 The editorial method is documented in [the complete workflow](docs/WORKFLOW.md)
-and [editorial standard](docs/EDITORIAL_STANDARD.md).
+and [editorial standard](docs/EDITORIAL_STANDARD.md). See
+[Optional Visual Production Integrations](docs/VISUAL_INTEGRATIONS.md) for the
+portable Shotcraft/OpenMontage boundary and fresh-system setup.
 
 ## Quick start on a Nix host
 
@@ -119,6 +123,22 @@ That creates the default model path expected by `scripts/transcribe_audio.sh`:
 models/ggml-large-v3-turbo-q5_0.bin
 ```
 
+### 6. Enable optional visual development tools
+
+For HTML/CSS capture, isolated Remotion inserts, pinned motion references, and
+an optional OpenMontage retrieval sandbox:
+
+```bash
+nix develop .#visual
+make integration-setup
+make integration-check
+make install-codex-skill
+```
+
+The setup clones exact upstream commits into ignored `.integrations/` and does
+not install provider SDKs or request credentials. Restart Codex after installing
+the bundled `documentary-visual-development` skill.
+
 ## Core commands
 
 ```bash
@@ -146,6 +166,9 @@ python scripts/build_video_assembly.py timeline/video-assembly.yaml
 
 # Package a stream-preserving MP4 delivery and verify it completely.
 scripts/finalize_delivery.sh INPUT_MP4 OUTPUT_MP4
+
+# Promote approved full-frame visual inserts without changing base audio.
+python scripts/apply_visual_overlays.py timeline/visual-overlays.yaml
 ```
 
 ## Project layout
@@ -161,6 +184,8 @@ renders/      Ignored review clips, assemblies, and delivery media
 scripts/      Reusable acquisition, analysis, conform, assembly, and QC tools
 schemas/      JSON schemas used by the project validator
 tests/        Unit tests and a synthetic end-to-end media fixture
+skills/       Portable Codex skills included with the template
+integrations/ Pinned optional upstream tools and license boundaries
 ```
 
 Large media, Whisper models, renders, logs, cookies, and credentials are excluded
